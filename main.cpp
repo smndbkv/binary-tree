@@ -10,5 +10,15 @@ int main()
     tr.add_node(11);
     tr.add_node(2);
     tr.print();
+    int a = 6;
+    node_bin_tree *x = tr.find(a);
+    if (x != nullptr)
+    {
+        printf("Find %d\n", a);
+    }
+    else
+    {
+        printf("Not find %d\n", a);
+    }
     return 0;
 }

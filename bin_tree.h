@@ -128,6 +128,27 @@ public:
         print_subtree(curr->left, s + 1, l, flag);
         print_subtree(curr->right, s + 1, l, flag);
     }
+
+    node_bin_tree *find(int x)
+    {
+        node_bin_tree *curr = root;
+        while (curr != nullptr)
+        {
+            if (x < curr->data)
+            {
+                curr = curr->left;
+            }
+            else if (x > curr->data)
+            {
+                curr = curr->right;
+            }
+            else
+            {
+                return curr;
+            }
+        }
+        return nullptr;
+    }
 };
 
 #endif
